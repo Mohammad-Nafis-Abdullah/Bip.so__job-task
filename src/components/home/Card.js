@@ -1,9 +1,12 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({movie}) => {
+    const navigate = useNavigate();
+
     return (
-        <div className='basis-40 sm:basis-44 grow-0 shrink rounded-md cursor-pointer'>
+        <div onClick={()=>navigate(`/movie/${movie?.id}`)} className='basis-40 sm:basis-44 grow-0 shrink rounded-md cursor-pointer'>
 
             <img src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`} alt="" className='h-[17rem] w-full rounded' />
 
