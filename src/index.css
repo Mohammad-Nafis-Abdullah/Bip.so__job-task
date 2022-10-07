@@ -24,7 +24,7 @@
     w-9;
   }
   .activePage{
-    @apply bg-primary hover:bg-primary text-white
+    @apply bg-red-500 hover:bg-primary text-white
     w-9;
   }
 }
