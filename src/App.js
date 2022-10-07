@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+import Home from "./components/home/Home";
+import Header from "./components/header/Header";
 
 function App() {
   const { pathname } = useLocation();
@@ -14,14 +16,11 @@ function App() {
 
 
   return (
-    <div className="">
-
-      <section>
+    <div className="bg-dark">
+      <Header/>
+      <section className="container">
         <Routes>
-          <Route path="/" element={''} />
-
-
-
+          <Route path="/" element={<Home/>} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </section>
