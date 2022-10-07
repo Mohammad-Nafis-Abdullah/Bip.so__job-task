@@ -6,6 +6,7 @@ import useRefetch from '../../hooks/useRefetch';
 import Loading from '../preBuild/Loading';
 import Card from './Card';
 import Pagination from './Pagination';
+import Search from './Search';
 import YearFilter from './YearFilter';
 
 const Home = () => {
@@ -31,6 +32,8 @@ const Home = () => {
             { loading && <Loading/>}
             
             <section className='max-w-[65rem] mx-auto mb-8'>
+
+                <Search setMovies={setMovies} allMovies={data?.data?.results}/>
 
                 <YearFilter years={years} setMovies={setMovies} allMovies={data?.data?.results}/>
 

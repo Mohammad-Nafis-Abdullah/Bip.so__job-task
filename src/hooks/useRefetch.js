@@ -23,6 +23,7 @@ const useRefetch = (url,initialValue=[],callback=()=>0)=> {
     const [loading,setLoading] = useState(true);
 
     useEffect(()=> {
+        setLoading(true);
         axios.get(url).then(({data}) => {
             setData(data);
             callback(data);
