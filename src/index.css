@@ -13,4 +13,12 @@
   .container{
     @apply mx-auto;
   }
+  .btnPage{
+    @apply bg-white hover:bg-white text-dark
+    w-9;
+  }
+  .activePage{
+    @apply bg-primary hover:bg-primary text-white
+    w-9;
+  }
 }
