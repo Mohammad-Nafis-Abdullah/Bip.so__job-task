@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaAngleDoubleLeft,FaAngleDoubleRight } from 'react-icons/fa';
 
 
 const Pagination = ({page,setPage}) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [page]);
+
     const pages = [];
     for (let i = 2; i < 500; i++) {
         pages.push(i);
@@ -31,6 +35,8 @@ const Pagination = ({page,setPage}) => {
             return 500
         }
     }
+
+
 
     return (
         <div className="btn-group">

@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 
 const Card = ({movie}) => {
     return (
-        <div className='basis-44 grow-0 shrink rounded-md cursor-pointer'>
+        <div className='basis-40 sm:basis-44 grow-0 shrink rounded-md cursor-pointer'>
 
             <img src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`} alt="" className='h-[17rem] w-full rounded' />
 
