@@ -29,7 +29,7 @@ const Home = () => {
     });
 
     return (
-        <div className='min-h-screen py-10 px-2'>
+        <div className='min-h-[90vh] py-10 px-2'>
             { loading && <Loading/>}
             
             <section className='max-w-[65rem] mx-auto mb-8'>
@@ -42,7 +42,7 @@ const Home = () => {
 
             </section>
 
-            <section className='flex justify-center items-center flex-wrap mb-10 gap-5 max-w-[65rem] mx-auto min-h-[15rem]'>
+            <section className='flex justify-center items-center flex-wrap mb-10 gap-5 max-w-[65rem] mx-auto min-h-[12rem]'>
                 {
                     movies?.length?
                     movies.map((movie)=><Card key={movie.id} movie={movie}/>):
