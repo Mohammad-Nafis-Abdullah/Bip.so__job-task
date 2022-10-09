@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
-const Search = ({setMovies,allMovies}) => {
+const Search = ({setMovies,allMovies=[]}) => {
 
     const [text,setText] = useState('');
 

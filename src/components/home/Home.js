@@ -6,6 +6,7 @@ import useRefetch from '../../hooks/useRefetch';
 import Loading from '../preBuild/Loading';
 import Card from './Card';
 import Pagination from './Pagination';
+import RatingFilter from './RatingFilter';
 import Search from './Search';
 import YearFilter from './YearFilter';
 
@@ -36,6 +37,8 @@ const Home = () => {
                 <Search setMovies={setMovies} allMovies={data?.data?.results}/>
 
                 <YearFilter years={years} setMovies={setMovies} allMovies={data?.data?.results}/>
+
+                <RatingFilter setMovies={setMovies} allMovies={data?.data?.results}/>
 
             </section>
 

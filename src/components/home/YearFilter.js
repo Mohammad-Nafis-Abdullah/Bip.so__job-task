@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YearFilter = ({years,setMovies,allMovies}) => {
+const YearFilter = ({years,setMovies,allMovies=[]}) => {
 
     const getYear = (year)=> {
         return parseInt(year?.split('-')?.[0]);

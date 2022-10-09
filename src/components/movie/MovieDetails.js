@@ -29,13 +29,13 @@ const MovieDetails = () => {
                     <p className='text-lg text-justify'>{data?.data?.overview}</p>
                     
                     <div>
-                        <p className='flex items-center gap-2 text-yellow-400'>
+                        <section className='flex items-center gap-2 text-yellow-400'>
                             <span className='text-gray-300'>Ratings :</span>
                             <FaStar className='w-4 h-4' />
                             <p className='font-bold'>{data?.data?.vote_average?.toFixed(1)}</p>
                             <small className='self-end font-bold'>({data?.data?.vote_count})</small>
-                        </p>
-                        <p className='flex items-center gap-2 '>
+                        </section>
+                        <section className='flex items-center gap-2 '>
                             <span className='text-gray-300'>Genre :</span>
                             <small className='space-x-2 text-sky-500 font-bold'>
                                 {
@@ -43,14 +43,14 @@ const MovieDetails = () => {
                                         <span key={g?.id}>{g?.name}{i !== data?.data?.genres?.length - 1 && ','}</span>)
                                 }
                             </small>
-                        </p>
-                        <p className='flex items-center gap-2 '>
+                        </section>
+                        <section className='flex items-center gap-2 '>
                             <span className='text-gray-300'>Release Date :</span>
                             <span className='space-x-2 font-bold italic'>
                                 {data?.data?.release_date}
                             </span>
-                        </p>
-                        <p className='flex items-center gap-2 '>
+                        </section>
+                        <section className='flex items-center gap-2 '>
                             <span className='text-gray-300'>Country :</span>
                             <span className='space-x-2 font-bold italic'>
                                 {
@@ -58,7 +58,7 @@ const MovieDetails = () => {
                                         <span key={i}>{c?.name}{i !== data?.data?.production_countries?.length - 1 && ','}</span>)
                                 }
                             </span>
-                        </p>
+                        </section>
                     </div>
                 </article>
 
