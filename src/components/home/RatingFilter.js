@@ -17,6 +17,7 @@ const RatingFilter = ({setMovies,allMovies=[]}) => {
             setMovies([...allMovies]?.filter(m=> parseInt(m?.vote_average)===rating));
         }
         else{
+            setRating(0);
             setMovies([...allMovies]?.filter(m=> true));
         }
     },[rating])

@@ -42,7 +42,7 @@ const Home = () => {
 
             </section>
 
-            <section className='flex justify-center items-center flex-wrap mb-10 gap-5 max-w-[65rem] mx-auto'>
+            <section className='flex justify-center items-center flex-wrap mb-10 gap-5 max-w-[65rem] mx-auto min-h-[15rem]'>
                 {
                     movies?.length?
                     movies.map((movie)=><Card key={movie.id} movie={movie}/>):
