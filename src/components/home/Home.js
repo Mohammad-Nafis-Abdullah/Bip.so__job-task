@@ -44,7 +44,9 @@ const Home = () => {
 
             <section className='flex justify-center items-center flex-wrap mb-10 gap-5 max-w-[65rem] mx-auto'>
                 {
-                    movies.map((movie)=><Card key={movie.id} movie={movie}/>)
+                    movies?.length?
+                    movies.map((movie)=><Card key={movie.id} movie={movie}/>):
+                    <h3 className='text-2xl font-bold text-red-500'>Movie Not Found</h3>
                 }
             </section>
 
